@@ -12,7 +12,7 @@ const Testimonials = () => {
       >
         <p className="text-center text-[#f06321]   text-sm md:text-3xl underline"> Testimonials </p>
         
-        <p className=" text-[#f06321] text-center text-2xl leading-tight tracking-tight">
+        <p className=" text-[#f06321] text-center text-sm md:text-2xl leading-tight tracking-tight">
           Discover what our clients think about our services.<br/> Read testimonials
           and reviews directly from those we've had the pleasure of working
           with.
