@@ -10,7 +10,7 @@ const Testimonials = () => {
         id="Testimonials"
         className="w-full flex flex-col gap-5 h-fit  px-7 py-10 lg:px-16 lg-py-20"
       >
-        <p className="text-center text-[#f06321]   text-sm md:text-3xl underline"> Testimonials </p>
+        <p className="text-center text-[#f06321] text-2xl md:text-4xl font-bold underline"> Testimonials </p>
         
         <p className=" text-[#f06321] text-center text-sm md:text-2xl leading-tight tracking-tight">
           Discover what our clients think about our services.<br/> Read testimonials

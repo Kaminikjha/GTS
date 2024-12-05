@@ -89,7 +89,7 @@ const Career = () => {
 
 
 <div>
-  <h1 className=' text-[#f06321]  text-sm md:text-3xl underline'>Career</h1>
+  <h1 className=' text-[#f06321] text-2xl md:text-4xl font-bold underline'>Career</h1>
   <p className=' text-sm md:text-2xl  text-[#f06321]  py-5'>Join us and be a part of groundbreaking software solutions.</p>
     <img src={image} width={500}  alt=" Avtar Image" />
 </div>
