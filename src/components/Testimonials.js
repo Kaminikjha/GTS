@@ -10,22 +10,22 @@ const Testimonials = () => {
         id="Testimonials"
         className="w-full flex flex-col gap-5 h-fit  px-7 py-10 lg:px-16 lg-py-20"
       >
-        <p className="text-center text-orange-400 text-sm md:text-3xl underline"> Testimonials </p>
+        <p className="text-center text-[#f06321]   text-sm md:text-3xl underline"> Testimonials </p>
         
-        <p className=" text-[#ffa500] text-center text-2xl">
+        <p className=" text-[#f06321] text-center text-2xl leading-tight tracking-tight">
           Discover what our clients think about our services.<br/> Read testimonials
           and reviews directly from those we've had the pleasure of working
           with.
         </p>
 
-        <div className="flex justify-center items-center flex-wrap mt-5 w-full gap-6">
-          <div className="bg-[#ffa500] hover:bg-[#fabc49] hover:opacity-85  border-2 hover:border-none border-orange-300 px-6 py-8 flex just items-center flex-col gap-4 rounded-xl w-80">
+        <div className="flex justify-center items-center flex-wrap mt-5 w-full gap-6 ">
+          <div className="bg-[#f06321]  hover:bg-orange-500 hover:opacity-85  border-2 hover:border-none border-gray-400 px-6 py-8 flex just items-center flex-col gap-4 rounded-xl w-80 shadow-xl">
             <img src={img1} alt="image" height={140} width={140} />
-            <p className="text-center text-[17px] text-white">
+            <p className="text-center text-[17px] text-white leading-tight tracking-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
               doloribus impedit porro, ducimus suscipit labore!
             </p>
-            <h1 className="text-center text-white text-2xl font-semibold">
+            <h1 className="text-center text-white text-2xl font-semibold ">
               Celia Almeda
             </h1>
             <p className="text-center text-[17px] text-white">
@@ -33,9 +33,9 @@ const Testimonials = () => {
             </p>
           </div>
 
-          <div className=" bg-[#ffa500] hover:bg-[#fabc49] border-2 hover:border-none border-orange-300 px-6 py-8 flex just items-center flex-col gap-4 rounded-xl w-80">
+          <div className=" bg-[#f06321]  hover:bg-orange-500 border-2 hover:border-none border-gray-400 px-6 py-8 flex just items-center flex-col gap-4 rounded-xl w-80 shadow-xl">
             <img src={img2} alt="image" height={140} width={140} />
-            <p className="text-center text-[17px] text-white">
+            <p className="text-center text-[17px] text-white leading-tight tracking-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
               doloribus impedit porro, ducimus suscipit labore!
             </p>
@@ -49,9 +49,9 @@ const Testimonials = () => {
 
          
 
-          <div className="bg-[#ffa500] hover:bg-[#fabc49] border-2 hover:border-none border-orange-300 px-6 py-8 flex just items-center flex-col gap-4 rounded-xl w-80">
+          <div className="bg-[#f06321]  hover:bg-orange-500 border-2 hover:border-none border-gray-400 px-6 py-8 flex just items-center flex-col gap-4 rounded-xl w-80 shadow-xl">
             <img src={img4} alt="image" height={140} width={140} />
-            <p className="text-center text-[17px] text-white">
+            <p className="text-center text-[17px] text-white leading-tight tracking-tight">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
               doloribus impedit porro, ducimus suscipit labore!
             </p>

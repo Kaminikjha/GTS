@@ -17,36 +17,33 @@ const Contact = () => {
       >
         <div className="flex justify-center items-center w-full lg:w-3/4 flex-col lg:flex-row bg-white border-2 shadow-lg rounded-lg px-8 py-12 gap-10 z-20">
           <div className="flex justify-center items-start flex-col gap-4 w-full">
-            <h1 className="text-[#ffa500] font-bold text-[35px]">
-           
-             
-            </h1>
+            
             <div
               id="phone"
-              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-600"
+              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
             >
-              <span className="  flex justify-center items-center bg-[#ffa500] hover:bg-orange-400 p-3 rounded-full h-12 w-12 ">
-              <IoMdCall />
+              <span className="  flex justify-center items-center bg-[#f06321]  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
+              <IoMdCall className='text-white'/>
               </span>
               +91 123456789
             </div>
 
             <div
               id="mail"
-              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-600"
+              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
             >
-              <span className="  flex justify-center items-center bg-[#ffa500] hover:bg-orange-400 p-3 rounded-full h-12 w-12 ">
-              <MdOutlineMail />
+              <span className="  flex justify-center items-center bg-[#f06321]  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
+              <MdOutlineMail className='text-white'/>
               </span>
               demomail@gmail.com
             </div>
 
             <div
               id="address"
-              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-600"
+              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
             >
-              <span className="  flex justify-center items-center bg-[#ffa500] hover:bg-orange-400 p-3 rounded-full h-12 w-14 ">
-              <ImAddressBook />
+              <span className="  flex justify-center items-center bg-[#f06321]  hover:bg-orange-500 p-3 rounded-full h-12 w-14 ">
+              <ImAddressBook className='text-white'/>
               </span>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
               libero!
@@ -55,20 +52,20 @@ const Contact = () => {
               id="logos"
               className="flex justify-center items-center gap-4 mt-10 "
             >
-              <span className=" flex justify-center items-center bg-[#ffa500] rounded-full cursor-pointer hover:bg-orange-400 h-12 w-12 ">
-              <FaFacebook />
+              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <FaFacebook className='text-white'/>
               </span>
 
-              <span className=" flex justify-center items-center bg-[#ffa500] rounded-full cursor-pointer hover:bg-orange-400 h-12 w-12 ">
-              <FaLinkedin />
+              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <FaLinkedin className='text-white'/>
               </span>
 
-              <span className=" flex justify-center items-center bg-[#ffa500] rounded-full cursor-pointer hover:bg-orange-400 h-12 w-12 ">
-              <FaTwitter />
+              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <FaTwitter className='text-white'/>
               </span>
 
-              <span className=" flex justify-center items-center bg-[#ffa500] rounded-full cursor-pointer hover:bg-orange-400 h-12 w-12 ">
-              <FaYoutube />
+              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <FaYoutube className='text-white'/>
               </span>
             </div>
           </div>
@@ -77,23 +74,23 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Enter your name"
-              className="px-4 py-4 w-full border-2 border-[#ffa500] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+              className="px-4 py-4 w-full border-2 border-[#f06321] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
             />
 
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-4 w-full border-2 border-[#ffa500] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+              className="px-4 py-4 w-full border-2 border-[#f06321] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
             />
             <textarea
-              className="px-4 py-4 w-full border-2 border-[#ffa500] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+              className="px-4 py-4 w-full border-2 border-[#f06321] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
               name=""
               id=""
               cols="30"
               rows="5"
               placeholder="Enter your message"
             ></textarea>
-            <button className=" bg-[#ffa500] text-whitepx-4 py-3 w-full rounded-lg hover:bg-[#fabc49] hover:text-white cursor-pointer">
+            <button className=" bg-[#f06321] text-white px-4 py-3 w-full rounded-lg hover:bg-orange-500 font-bold cursor-pointer">
               SUBMIT
             </button>
           </div>

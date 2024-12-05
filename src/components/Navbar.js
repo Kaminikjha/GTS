@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
    <>
-   <nav className=" bg-[#ffa500] flex flex-wrap justify-between md:items-center text-white px-10 py-6  md:px-20">
+   <nav className=" bg-[#f06321]  flex flex-wrap justify-between md:items-center text-white px-10 py-6  md:px-20">
         <span className=" bg-[bg-[#ffa500] border-2 rounded-xl px-4 py-2 hover:opacity-95 duration-300 hover:scale-105  text-xl lg:text-2xl font-bold tracking-wide"> GTS  </span>
 
         <ul className={`${
