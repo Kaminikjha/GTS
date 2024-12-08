@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { RiMenu3Fill } from "react-icons/ri";
 import { RiCloseFill } from "react-icons/ri";
+import logo from "../assets/logo 1.png"
 
 const Navbar = () => {
   const [menu, openMenu] = useState(false);
@@ -10,7 +11,7 @@ const Navbar = () => {
   return (
    <>
    <nav className=" bg-[#f06321]  flex flex-wrap justify-between md:items-center text-white px-10 py-6  md:px-20">
-        <span className=" bg-[bg-[#ffa500] border-2 rounded-xl px-4 py-2 hover:opacity-95 duration-300 hover:scale-105  text-xl lg:text-2xl font-bold tracking-wide"> GTS  </span>
+        <span className=" bg-[bg-[#ffa500] border-2 rounded-xl px-2 pt-2 overflow-hidden  duration-300 hover:scale-105 "> <img src={logo} width={120} alt="" />  </span>
 
         <ul className={`${
             menu ? "block" : "hidden"
@@ -48,8 +49,8 @@ const Navbar = () => {
 
         {showMenue ? (
           <RiMenu3Fill
-            size={30}
-            className=" md:hidden absolute right-10 top-6  transition-all duration-300"
+            size={35}
+            className="  md:hidden absolute right-10 top-8  transition-all duration-300"
             onClick={() => {
               openMenu(!menu);
               setShowmenu(!showMenue);
@@ -57,8 +58,8 @@ const Navbar = () => {
           />
         ) : (
           <RiCloseFill
-            size={30}
-            className=" md:hidden absolute right-10 top-6  transition-all duration-300"  onClick={() => {
+            size={35}
+            className=" md:hidden absolute right-10 top-8  transition-all duration-300"  onClick={() => {
                 openMenu(!menu);
                 setShowmenu(!showMenue);
               }}

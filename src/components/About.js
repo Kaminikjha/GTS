@@ -1,12 +1,13 @@
 import React from 'react'
 import img from "../assets/img-2.png"
 
+
 import { IoMdArrowRoundForward } from "react-icons/io";
 
 const About = () => {
   return (
     <>
-      <div id='About' className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] shadow-xl mx-0 md:mx-20 bg-opacity-70 rounded-lg p-12'>
+      <div id='About' className='text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] shadow-xl mx-0 md:mx-20 bg-opacity-70 rounded-lg p-12 '>
 <div>
     <h2 className='text-2xl md:text-4xl font-bold pb-5'>
 About
