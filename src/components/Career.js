@@ -3,15 +3,16 @@ import React from 'react'
 const Career = () => {
   return (
    <>
-   <div id='Career' className='gap-3 text-white  md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] shadow-xl mx-0 md:mx-20 bg-opacity-70 rounded-lg p-12 my-20'>
+   <div id='Career' className='gap-3 text-white  md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] shadow-xl mx-0 md:mx-20 rounded-lg p-12 my-20'>
    <div>
     <h2 className='text-2xl md:text-4xl font-bold pb-5'>
-Career Section
+    Elevate Your Careers with Us
     </h2>
+    
     </div>
     <div className='gap-3 border-2 border-gray-200 rounded-xl w-full px-5 py-4 flex flex-col lg:flex-row justify-between lg:items-center mb-3'>
       <div>
-      <h1 className=" font-semibold underline">
+      <h1 className="text-white font-semibold underline">
       Backend Developer
       </h1>
       <p>Skills:- Node.js / Python (Django/Flask) / PHP</p>
@@ -22,7 +23,7 @@ Career Section
 
       </div>
         </div>
-      <button className='hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2'>
+      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -30,7 +31,7 @@ Career Section
 
     <div className='gap-3 border-2 border-gray-200 rounded-xl w-full px-5 py-4 flex flex-col lg:flex-row justify-between lg:items-center mb-3'>
       <div>
-      <h1 className=" font-semibold underline">
+      <h1 className="text-white font-semibold underline">
       Frontend Developer
       </h1>
       <p>Skills:- Frontend: HTML, CSS, JavaScript (React/Angular optional)</p>
@@ -41,7 +42,7 @@ Career Section
       </button>
       </div>
         </div>
-      <button className='hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2'>
+      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -49,7 +50,7 @@ Career Section
 
     <div className='gap-3 border-2 border-gray-200 rounded-xl w-full px-5 py-4 flex flex-col lg:flex-row justify-between lg:items-center mb-3'>
       <div>
-      <h1 className=" font-semibold underline">
+      <h1 className="text-white font-semibold underline">
       Database
       </h1>
       <p>Skills:- MySQL / PostgreSQL / MongoDB</p>
@@ -60,7 +61,7 @@ Career Section
 
       </div>
         </div>
-      <button className='hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2'>
+      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -68,7 +69,7 @@ Career Section
 
     <div className='gap-3 border-2 border-gray-200 rounded-xl w-full px-5 py-4 flex flex-col lg:flex-row justify-between lg:items-center mb-3'>
       <div>
-      <h1 className=" font-semibold underline">
+      <h1 className="text-white font-semibold underline">
       Authentication
       </h1>
       <p>Skills:- JWT / OAuth</p>
@@ -80,12 +81,12 @@ Career Section
       </button>
       </div>
         </div>
-      <button className=' hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2'>
+      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
     </div>
-    <button className='underline hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2'>
+    <button className='border-white underline hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         View More
       </button>
    </div>

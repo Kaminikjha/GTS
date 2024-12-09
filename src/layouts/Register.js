@@ -3,6 +3,7 @@ import { FaUser } from "react-icons/fa";
 import { IoMdMail } from "react-icons/io";
 import { FaLock } from "react-icons/fa";
 
+
 const Register = () => {
   return (
     <>
