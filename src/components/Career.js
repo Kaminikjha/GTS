@@ -1,15 +1,23 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+
 
 const Career = () => {
+  const navigate = useNavigate();
   return (
    <>
-   <div id='Career' className='gap-3 text-white  md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] shadow-xl mx-0 md:mx-20 rounded-lg p-12 my-20'>
+   <div id='Career' className='gap-3 text-white  md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] opacity-90 shadow-xl mx-0 md:mx-20 rounded-lg p-12 my-20'>
    <div>
     <h2 className='text-2xl md:text-4xl font-bold pb-5'>
     Elevate Your Careers with Us
     </h2>
     
     </div>
+    
+    {/* <button onClick={()=> navigate("/login")}>Click me!</button> */}
+
+    
     <div className='gap-3 border-2 border-gray-200 rounded-xl w-full px-5 py-4 flex flex-col lg:flex-row justify-between lg:items-center mb-3'>
       <div>
       <h1 className="text-white font-semibold underline">
@@ -23,7 +31,7 @@ const Career = () => {
 
       </div>
         </div>
-      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -42,7 +50,7 @@ const Career = () => {
       </button>
       </div>
         </div>
-      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -61,7 +69,7 @@ const Career = () => {
 
       </div>
         </div>
-      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -81,14 +89,17 @@ const Career = () => {
       </button>
       </div>
         </div>
-      <button className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
     </div>
-    <button className='border-white underline hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+    <div className='flex items-center justify-center'>
+    <button className=' border-white underline hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         View More
       </button>
+    </div>
+    
    </div>
    </>
   )
