@@ -84,7 +84,7 @@ const Partner_FP = () => {
             <h3 className="text-sm text-[#f06321] uppercase underline decoration-1 tracking-wider">
               Our Consultants always help you
             </h3>
-            <p className="text-lg text-[#f06321]">
+            <p className="text-lg font-semibold text-[#f06321]">
               "Request a call back" in the context of partnerships refers to a
               simple process or feature where one party (usually a potential
               partner or client) can provide their contact information and
