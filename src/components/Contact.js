@@ -22,7 +22,7 @@ const Contact = () => {
               id="phone"
               className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
             >
-              <span className="  flex justify-center items-center bg-[#f06321]  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
+              <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
               <IoMdCall className='text-white'/>
               </span>
               +91 123456789
@@ -32,7 +32,7 @@ const Contact = () => {
               id="mail"
               className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
             >
-              <span className="  flex justify-center items-center bg-[#f06321]  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
+              <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
               <MdOutlineMail className='text-white'/>
               </span>
               demomail@gmail.com
@@ -42,7 +42,7 @@ const Contact = () => {
               id="address"
               className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
             >
-              <span className="  flex justify-center items-center bg-[#f06321]  hover:bg-orange-500 p-3 rounded-full h-12 w-14 ">
+              <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-14 ">
               <ImAddressBook className='text-white'/>
               </span>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
@@ -52,19 +52,19 @@ const Contact = () => {
               id="logos"
               className="flex justify-center items-center gap-4 mt-10 "
             >
-              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <span className=" flex justify-center items-center bg-[#f06321] opacity-90  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
               <FaFacebook className='text-white'/>
               </span>
 
-              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <span className=" flex justify-center items-center bg-[#f06321] opacity-90  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
               <FaLinkedin className='text-white'/>
               </span>
 
-              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <span className=" flex justify-center items-center bg-[#f06321] opacity-90  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
               <FaTwitter className='text-white'/>
               </span>
 
-              <span className=" flex justify-center items-center bg-[#f06321]  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
+              <span className=" flex justify-center items-center bg-[#f06321] opacity-90 rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
               <FaYoutube className='text-white'/>
               </span>
             </div>
@@ -74,23 +74,23 @@ const Contact = () => {
             <input
               type="text"
               placeholder="Enter your name"
-              className="px-4 py-4 w-full border-2 border-[#f06321] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+              className="px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
             />
 
             <input
               type="email"
               placeholder="Enter your email"
-              className="px-4 py-4 w-full border-2 border-[#f06321] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+              className="px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
             />
             <textarea
-              className="px-4 py-4 w-full border-2 border-[#f06321] rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+              className="px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
               name=""
               id=""
               cols="30"
               rows="5"
               placeholder="Enter your message"
             ></textarea>
-            <button className=" bg-[#f06321] text-white px-4 py-3 w-full rounded-lg hover:bg-orange-500 font-bold cursor-pointer">
+            <button className=" bg-[#f06321] opacity-90 text-white px-4 py-3 w-full rounded-lg hover:bg-orange-500 font-bold cursor-pointer">
               SUBMIT
             </button>
           </div>
@@ -99,7 +99,7 @@ const Contact = () => {
         <img
           src={cube}
           alt="cube"
-          className="  w-full h-72  absolute hidden lg:block"
+          className="w-full h-72  absolute hidden lg:block"
         />
       </section>
     </>
