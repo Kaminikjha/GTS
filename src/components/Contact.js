@@ -35,7 +35,7 @@ const Contact = () => {
               <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
               <MdOutlineMail className='text-white'/>
               </span>
-              demomail@gmail.com
+              sgarabapu@gmail.com
             </div>
 
             <div

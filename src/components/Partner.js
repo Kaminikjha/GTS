@@ -1,7 +1,6 @@
 
 import React, { useState } from "react";
-import image from "../assets/Background.png";
-import { FaChevronDown } from "react-icons/fa6";
+
 import { useNavigate } from 'react-router-dom';
 
 const Partner = () => {
@@ -18,29 +17,101 @@ const Partner = () => {
   return (
     <>
 
-      <div
-        id="Partner"
-        className="relative flex justify-center items-center  md:flex flex-wrap flex-col md:flex-row  md:py-20"
+<div
+        id="Home"
+        className="w-full bg-[#f06321] md:mt-20 opacity-90 text-white flex md:flex flex-wrap  md:flex-row justify-evenly gap-8 items-start p-10 md:p-16"
       >
-        <div className=" absolute flex items-center justify-center mx-10 sm:mx-52">
-         
-         <div className="">
-         <h1 className="flex justify-center gap-2 text-2xl md:text-4xl font-bold text-white p-1 md:pb-5">
-            Our <span className="text-[#f06321] "> Partnerships</span>
+        <div className="w-full flex items-center justify-center ">
+          <h1 className="text-2xl md:text-4xl font-bold pb-5">
+            Our Partnerships
           </h1>
-          <p className="text-xs md:text-3xl  leading-normal  text-white flex justify-center items-center text-center">We collaborate with strategic partners to create value and drive mutual success. By building strong, long-term relationships, we ensure a foundation of trust and innovation. Our partnerships focus on shared goals, enabling us to leverage collective strengths for growth, and sustainable solutions.</p>
+        </div>
 
-          <div className="flex justify-center p-1 md:pt-10">
-          <FaChevronDown onClick={()=> navigate("/partner_fp")} className="flex justify-center rounded-full bg-white text-2xl md:text-5xl p-2 text-[#f06321]"/>
+        <div className="flex justify-evenly gap-5 w-full flex-wrap md:flex-row lg:w-3/3 pb-5">
+          <div className=" bg-white  rounded-xl border-2 shadow-xl duration-300 hover:scale-105">
+            <h3 className="text-xl md:text-3xl my-5 mx-10 md:mx-20 font-semibold text-[#f06321]">
+              GTS
+            </h3>
           </div>
-         </div>
-         
-          
+
+          <div className="bg-white  rounded-xl border-2 shadow-xl duration-300 hover:scale-105">
+            <h3 className="text-xl md:text-3xl my-5 mx-10 md:mx-20 font-semibold text-[#f06321]">
+              GTS
+            </h3>
+          </div>
+
+          <div className="bg-white  rounded-xl border-2 shadow-xl duration-300 hover:scale-105">
+            <h3 className="text-xl md:text-3xl my-5 mx-10 md:mx-20 font-semibold text-[#f06321]">
+              GTS
+            </h3>
+          </div>
+
+          <div className="bg-white  rounded-xl border-2 shadow-xl duration-300 hover:scale-105">
+            <h3 className="text-xl md:text-3xl my-5 mx-10 md:mx-20 font-semibold text-[#f06321]">
+              GTS
+            </h3>
+          </div>
+
+       
+
+     
+
          
         </div>
-       
- <img src={image}  alt="" />
-       
+
+        <div className="flex justify-center items-center w-full lg:w-3/3 flex-col lg:flex-row bg-white border-2 shadow-lg rounded-lg px-8 py-12 gap-10 z-20">
+          <div className="flex justify-center items-start flex-col gap-4 w-full">
+            <h2 className="text-2xl md:text-4xl font-bold text-[#f06321] underline decoration-2">
+              REQUEST A CALL BACK
+            </h2>
+            <h3 className="text-sm text-[#f06321] uppercase underline decoration-1 tracking-wider">
+              Our Consultants always help you
+            </h3>
+            <p className="text-lg font-semibold text-[#f06321]">
+              "Request a call back" in the context of partnerships refers to a
+              simple process or feature where one party (usually a potential
+              partner or client) can provide their contact information and
+              request the other party to call them at a convenient time. This is
+              often used in business or service contexts to initiate
+              discussions, clarify details, or explore collaboration
+              opportunities. It prioritizes effective communication and
+              strengthens relationships.
+            </p>
+          </div>
+
+          <div className=" flex flex-col justify-center items-center gap-2 w-full">
+            <span className="text-lg text-[#f06321] font-medium underline decoration-2">
+              WE WOULD LIKE TO DISCUS
+            </span>
+            <input
+              type="text"
+              placeholder="Partnership Planning"
+              className=" text-black px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+            />
+            
+            <input
+              type="email"
+              placeholder="Enter your name"
+              className="text-black px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+            />
+
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className=" text-black px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+            />
+
+            <input
+              type="email"
+              placeholder="Your Phone Number"
+              className=" text-black px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
+            />
+
+            <button className=" bg-[#f06321] opacity-90 text-white px-4 py-3 w-full rounded-lg hover:bg-orange-500 font-bold cursor-pointer">
+              SEND
+            </button>
+          </div>
+        </div>
       </div>
       
     </>
