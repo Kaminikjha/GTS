@@ -1,7 +1,19 @@
-import React from "react";
-import image from "../assets/img-4.jpg";
+
+import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
+
+  
 
 const Client = () => {
+  const [open, setOpen] =useState(false)
+  
+    //handle toggle
+  
+    const toggle =() =>{
+      setOpen(!open)
+    }
+    const navigate = useNavigate();
+
   return (
     <>
       <div>
@@ -14,19 +26,19 @@ const Client = () => {
         className="text-white flex md:flex flex-wrap flex-col-2 md:flex-row  w-full justify-evenly items-start md:p-20"
       >
         <div className=" bg-[#f06321] border border-1 border-white shadow-lg rounded-xl font-bold hover:opacity-85 duration-300 hover:scale-105 mb-5">
-          <h1 className=" text-xl md:text-4xl px-16 py-16">GTS</h1>
+          <h1 onClick={()=> navigate("/home")} className=" cursor-pointer text-xl md:text-4xl px-16 py-16">GTS</h1>
         </div>
 
         <div className=" bg-[#f06321] border border-1 border-white shadow-lg rounded-xl font-bold hover:opacity-85 duration-300 hover:scale-105 ">
-          <h1 className=" text-xl md:text-4xl px-16 py-16">GTS</h1>
+          <h1 onClick={()=> navigate("/home")} className=" cursor-pointer text-xl md:text-4xl px-16 py-16">GTS</h1>
         </div>
 
         <div className=" bg-[#f06321] border border-1 border-white shadow-lg rounded-xl font-bold hover:opacity-85 duration-300 hover:scale-105 ">
-          <h1 className=" text-xl md:text-4xl px-16 py-16">GTS</h1>
+          <h1 onClick={()=> navigate("/home")} className=" cursor-pointer text-xl md:text-4xl px-16 py-16">GTS</h1>
         </div>
 
         <div className=" bg-[#f06321] border border-1 border-white shadow-lg rounded-xl font-bold hover:opacity-85 duration-300 hover:scale-105  mb-5">
-          <h1 className=" text-xl md:text-4xl px-16 py-16">GTS</h1>
+          <h1 onClick={()=> navigate("/home")} className=" cursor-pointer text-xl md:text-4xl px-16 py-16">GTS</h1>
         </div>
       </div>
     </>
