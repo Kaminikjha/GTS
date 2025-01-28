@@ -60,13 +60,16 @@ function App() {
           element={
             <>
               <Navbar />
+              
              <Outlet />
+             
               
             </>
           }
         >
           <Route path="/about" element={<About />}></Route>
           <Route path="/services" element={<Services />}></Route>
+          <Route path="/contact" element={<Contact />} />
           {/* <Route path="/career" element={<Career />}></Route> */}
           
           {/* <Route path="/client" element={<Client />}></Route> */}
@@ -75,7 +78,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         
-        <Route path="/contact" element={<Contact />} />
+        
       </Routes>
       {/* <Form/> */}
       <Footer/>

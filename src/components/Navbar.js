@@ -28,7 +28,7 @@ const Navbar = () => {
               Home
             </li>
           </a>
-          <div className="block md:hidden container mx-auto px-4 flex-col md:flex-row justify-center items-center mt-4 border-t pt-4"></div>
+          <div className="block sm:hidden container mx-auto px-4 flex-col md:flex-row justify-center items-center mt-4 border-t pt-4"></div>
           <a href="/partner">
             <li className="hover:opacity-95 hover:scale-105 md:hover:underline transition p-2 md:p-0 text-white text-lg md:text-2xl">
               Our Partners

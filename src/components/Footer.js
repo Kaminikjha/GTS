@@ -1,5 +1,7 @@
-import React from "react";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useNavigate } from 'react-router-dom';
+import React, { useState } from "react";
 import {
   faInstagram,
   faLinkedin,
@@ -8,6 +10,17 @@ import {
 import logo from "../assets/logo.jpeg";
 
 const Footer = () => {
+
+  const [open, setOpen] =useState(false)
+
+  //handle toggle
+
+  const toggle =() =>{
+    setOpen(!open)
+  }
+
+  const navigate = useNavigate();
+
   return (
     <footer className="bg-[#f06321] opacity-90 text-white py-8 font-['Roboto Slab'] mt-10">
       <div className="container mx-auto px-4 flex flex-col items-center">
@@ -16,7 +29,7 @@ const Footer = () => {
             <img
               className="rounded-2xl hover:opacity-90 hover:scale-105 transition duration-300"
               src={logo}
-              width={150}
+              width={90}
               alt="Logo"
             />
           </div>
@@ -26,8 +39,8 @@ const Footer = () => {
               About Us
             </h2>
             <a
-              href="http://localhost:3000/services"
-              className="mt-2 text-sm md:text-xl hover:opacity-90 hover:scale-105 transition duration-300"
+             onClick={()=> navigate("/services")}
+              className=" cursor-pointer mt-2 text-sm md:text-xl hover:opacity-90 hover:scale-105 transition duration-300"
             >
               Our Services
             </a>
@@ -39,8 +52,8 @@ const Footer = () => {
               Support
             </h2>
             <a
-              href="http://localhost:3000/contact"
-              className="mt-2 text-sm md:text-xl hover:opacity-90 hover:scale-105 transition duration-300"
+              onClick={()=> navigate("/contact")}
+              className=" cursor-pointer mt-2 text-sm md:text-xl hover:opacity-90 hover:scale-105 transition duration-300"
             >
               Contact
             </a>

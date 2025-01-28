@@ -1,7 +1,7 @@
 import React from "react";
 import { ReactTyped } from "react-typed";
 import img6 from "../assets/img-6.jpg";
-
+// hello
 const VisionMission = () => {
   return (
     <>
