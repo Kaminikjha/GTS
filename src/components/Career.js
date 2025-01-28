@@ -31,7 +31,7 @@ const Career = () => {
 
       </div>
         </div>
-      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/register")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -50,7 +50,7 @@ const Career = () => {
       </button>
       </div>
         </div>
-      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/register")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -69,7 +69,7 @@ const Career = () => {
 
       </div>
         </div>
-      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/register")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 
@@ -89,7 +89,7 @@ const Career = () => {
       </button>
       </div>
         </div>
-      <button onClick={()=> navigate("/login")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
+      <button onClick={()=> navigate("/register")} className='border-white hover:opacity-85 duration-300 hover:scale-105 border-2 rounded-lg px-4 py-2 text-white'>
         Apply
       </button>
 

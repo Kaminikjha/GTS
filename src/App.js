@@ -1,15 +1,19 @@
-import { Route, Routes, Outlet } from "react-router-dom";
+import { Route, Routes, Outlet, } from "react-router-dom";
 import "./App.css";
 import About from "./components/About";
-import Career from "./components/Career";
+import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 import Login from "./layouts/Login";
 import Register from "./layouts/Register";
-import Testimonials from "./components/Testimonials";
-import Client from "./components/Client";
+import MissionVission from "./components/MissionVission";
 import Partner from "./components/Partner";
+import Footer from "./components/Footer";
+import Form from "./components/Form";
+import Testimonials from "./components/Testimonials";
+import Career from "./components/Career";
+import Client from "./components/Client";
 
 
 
@@ -24,10 +28,12 @@ function App() {
             <>
               <Navbar />
               <Home />
-              <About />
-              <Client/>
+              <About/>
+              <Services />
+              <MissionVission/>
+              {/* <Client/> */}
               <Partner/>
-              <Career />
+              {/* <Career /> */}
               <Contact />
               <Outlet />
             </>
@@ -39,10 +45,12 @@ function App() {
             <>
               <Navbar />
               <Home />
-              <About />
-              <Client/>
+              <About/>
+              <Services />
+              <MissionVission/>
+              {/* <Client/> */}
               <Partner/>
-              <Career />
+              {/* <Career /> */}
               <Contact />
               <Outlet />
             </>
@@ -53,14 +61,15 @@ function App() {
             <>
               <Navbar />
              <Outlet />
-              <Contact />
+              
             </>
           }
         >
           <Route path="/about" element={<About />}></Route>
-          <Route path="/career" element={<Career />}></Route>
+          <Route path="/services" element={<Services />}></Route>
+          {/* <Route path="/career" element={<Career />}></Route> */}
           
-          <Route path="/client" element={<Client />}></Route>
+          {/* <Route path="/client" element={<Client />}></Route> */}
           <Route path="/partner" element={<Partner />}></Route>
         </Route>
         <Route path="/login" element={<Login />} />
@@ -68,8 +77,8 @@ function App() {
         
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
-      
+      {/* <Form/> */}
+      <Footer/>
       
     </>
   );

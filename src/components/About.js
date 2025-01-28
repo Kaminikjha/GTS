@@ -1,80 +1,52 @@
 import React from "react";
-import img from "../assets/img-2.png";
+import { ReactTyped } from "react-typed";
+import img6 from "../assets/img-6.jpg";
 
-import { IoMdArrowRoundForward } from "react-icons/io";
-
-const About = () => {
+const VisionMission = () => {
   return (
     <>
-      <div
-        id="About"
-        className="my-20 text-white md:flex overflow-hidden items-center md:flex-wrap md:justify-center bg-[#f06321] opacity-90 shadow-xl mx-0 md:mx-20 rounded-lg p-12 "
+      {/* Hero Section */}
+      <section
+        id="about"
+        className="flex md:gap-20 flex-col md:flex-row justify-between items-center px-10 my-20"
       >
-        <div>
-          <h2 className="text-2xl md:text-4xl font-bold pb-5">About</h2>
-
-          <div className="md:flex flex-wrap flex-col md:flex-row items-center">
+          {/* Image Section */}
+          <div className="md:w-1/2 relative mt-10 md:mt-0 pb-10 md:pb-0">
+          <div className="">
             <img
-              src={img}
-              width={500}
-              className=" shadow-xl"
-              alt=" About Image"
+              src={img6}
+              alt="Bakery Visual"
+              className="rounded-lg shadow-lg object-cover w-auto h-auto"
             />
-
-            <ul>
-              <div className="flex gap-3 py-4 pl-3">
-                <IoMdArrowRoundForward size={30} className=" mt-1" />
-
-                <span className="w-96">
-                  <h1 className="text-xl md:text-3xl font-semibold leading-normal hover:underline cursor-pointer">
-                    Softwear Developer
-                  </h1>
-                  <p className=" text-sm md:text-base leading-normal pt-2">
-                    We are looking for a talented and motivated Software
-                    Developer to join our dynamic team. As a Software Developer,
-                    you will be responsible for designing, coding, testing, and
-                    maintaining software applications.
-                  </p>
-                </span>
-              </div>
-
-              <div className="flex gap-3 py-4 pl-3">
-                <IoMdArrowRoundForward size={30} className="mt-1" />
-
-                <span className="w-96">
-                  <h1 className="text-xl md:text-3xl font-semibold leading-normal hover:underline cursor-pointer">
-                    Web Developer
-                  </h1>
-                  <p className=" text-sm md:text-base leading-normal pt-2">
-                    We are looking for a talented and motivated Software
-                    Developer to join our dynamic team. As a Software Developer,
-                    you will be responsible for designing, coding, testing, and
-                    maintaining software applications.
-                  </p>
-                </span>
-              </div>
-
-              <div className="flex gap-3 py-4 pl-3">
-                <IoMdArrowRoundForward size={30} className=" mt-1" />
-
-                <span className="w-96">
-                  <h1 className="text-xl md:text-3xl font-semibold leading-normal hover:underline cursor-pointer">
-                    User interface designer
-                  </h1>
-                  <p className=" text-sm md:text-base leading-normal pt-2">
-                    We are looking for a talented and motivated Software
-                    Developer to join our dynamic team. As a Software Developer,
-                    you will be responsible for designing, coding, testing, and
-                    maintaining software applications.
-                  </p>
-                </span>
-              </div>
-            </ul>
           </div>
         </div>
-      </div>
+        {/* Text Content */}
+        <div className="md:w-1/2">
+          <h2 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 mb-6">
+            About Us
+          </h2>
+
+          <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed">
+            Gollamudi Technology and Software is dedicated to providing
+            top-notch technology solutions for modern businesses. Our team of
+            experts specializes in creating custom software, web applications,
+            and mobile apps tailored to your unique needs. With a focus on
+            innovation, quality, and user experience, Gollamudi Technology and
+            Software is your trusted partner for digital success. Transform your
+            ideas into reality with us. At Gollamudi Technology and Software, we
+            bring ideas to life with innovative technology solutions. We
+            specialize in creating top-quality web and mobile applications,
+            custom software, and user-friendly digital experiences. Our goal is
+            to empower businesses with modern technology, creative design, and
+            smart strategies. With a focus on quality and collaboration, we are
+            your trusted partner for growth and success in the digital world.
+          </p>
+        </div>
+
+      
+      </section>
     </>
   );
 };
 
-export default About;
+export default VisionMission;

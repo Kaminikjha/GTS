@@ -1,109 +1,198 @@
-import React from 'react'
-import cube from "../assets/cube.png";
+import React, { useRef, useState } from "react";
+import emailjs from "emailjs-com";
 import { IoMdCall } from "react-icons/io";
-import { MdOutlineMail } from "react-icons/md";
-import { ImAddressBook } from "react-icons/im";
-import { FaFacebook } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa6";
-import { FaYoutube } from "react-icons/fa";
+import { IoLocationSharp } from "react-icons/io5";
+import { MdOutlineEmail } from "react-icons/md";
 
-const Contact = () => {
+const ContactUs = () => {
+  const form = useRef();
+  const [alertMessage, setAlertMessage] = useState("");
+  const [showAlert, setShowAlert] = useState(false);
+
+  // Validate form inputs
+  const validateForm = () => {
+    const name = form.current.from_name.value.trim();
+    const email = form.current.user_email.value.trim();
+    const phone = form.current.user_phone.value.trim();
+    const message = form.current.message.value.trim();
+
+    // Validate Name
+    if (name === "") {
+      setAlertMessage("Please enter your name.");
+      setShowAlert(true);
+      return false;
+    }
+
+    // Validate Email
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (email === "" || !emailRegex.test(email)) {
+      setAlertMessage("Please enter a valid email address.");
+      setShowAlert(true);
+      return false;
+    }
+
+    // Validate Phone Number
+    const phoneRegex = /^[0-9]{10}$/;
+    if (phone === "" || !phoneRegex.test(phone)) {
+      setAlertMessage("Please enter a valid 10-digit phone number.");
+      setShowAlert(true);
+      return false;
+    }
+
+    // Validate Message
+    if (message === "") {
+      setAlertMessage("Please enter your message.");
+      setShowAlert(true);
+      return false;
+    }
+
+    return true;
+  };
+
+  // Send email function
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    if (!validateForm()) {
+      return; // Do not proceed with sending the email if validation fails
+    }
+
+    // Using your EmailJS credentials
+    emailjs
+      .sendForm(
+        "service_6dmiyzx", // Replace with your EmailJS Service ID
+        "template_xxeyn07", // Replace with your EmailJS Template ID
+        form.current,
+        "pilFSvoqFoHBRuGBG" // Replace with your EmailJS Public Key
+      )
+      .then(
+        (result) => {
+          setAlertMessage("Message sent successfully!");
+          setShowAlert(true);
+          form.current.reset(); // Clear the form after sending
+        },
+        (error) => {
+          setAlertMessage("Failed to send message. Please try again.");
+          setShowAlert(true);
+        }
+      );
+  };
+
+  const handleCloseAlert = () => {
+    setShowAlert(false);
+    setAlertMessage("");
+  };
+
   return (
-    <>
-    <section
-        id="Contact"
-        className="w-full  flex flex-col lg:flex-row gap-10 lg:gap-20 h-fit p-4 lg:p-20 justify-center items-center"
-      >
-        <div className="flex justify-center items-center w-full lg:w-3/4 flex-col lg:flex-row bg-white border-2 shadow-lg rounded-lg px-8 py-12 gap-10 z-20">
-          <div className="flex justify-center items-start flex-col gap-4 w-full">
-            
-            <div
-              id="phone"
-              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
-            >
-              <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
-              <IoMdCall className='text-white'/>
-              </span>
-              +91 123456789
+    <div
+      id="contact"
+      className="min-h-screen flex items-center justify-center p-6 mt-10"
+    >
+      <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-2xl rounded-lg p-10 transform transition-transform duration-300 ease-in-out">
+        {/* Left Section: Contact Information */}
+        <div className="space-y-6">
+          <h2 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 hover:translate-x-2 transition-transform duration-300">
+            Get In Touch With Us
+          </h2>
+          <p className="text-sm md:text-xl text-[#f06321] opacity-90">
+            Together, we can create something extraordinary. Let’s talk!
+          </p>
+          <div className="space-y-4">
+            {/* Location Info */}
+            <div className="flex items-center space-x-4">
+              <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
+                <IoLocationSharp className="text-3xl" />
+              </div>
+              <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
+                Tenali, Andhra Pradesh
+              </p>
             </div>
-
-            <div
-              id="mail"
-              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
-            >
-              <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-12 ">
-              <MdOutlineMail className='text-white'/>
-              </span>
-              sgarabapu@gmail.com
+            {/* Phone Info */}
+            <div className="flex items-center space-x-4">
+              <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
+                <IoMdCall className="text-3xl" />
+              </div>
+              <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
+                +919490612648
+              </p>
             </div>
-
-            <div
-              id="address"
-              className=" flex justify-center items-center gap-4 text-lg font-semibold text-gray-700"
-            >
-              <span className="  flex justify-center items-center bg-[#f06321] opacity-90  hover:bg-orange-500 p-3 rounded-full h-12 w-14 ">
-              <ImAddressBook className='text-white'/>
-              </span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum,
-              libero!
+            {/* Email Info */}
+            <div className="flex items-center space-x-4">
+              <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
+                <MdOutlineEmail className="text-3xl" />
+              </div>
+              <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
+                g.rohithsai@gmail.com
+              </p>
             </div>
-            <div
-              id="logos"
-              className="flex justify-center items-center gap-4 mt-10 "
-            >
-              <span className=" flex justify-center items-center bg-[#f06321] opacity-90  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
-              <FaFacebook className='text-white'/>
-              </span>
-
-              <span className=" flex justify-center items-center bg-[#f06321] opacity-90  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
-              <FaLinkedin className='text-white'/>
-              </span>
-
-              <span className=" flex justify-center items-center bg-[#f06321] opacity-90  rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
-              <FaTwitter className='text-white'/>
-              </span>
-
-              <span className=" flex justify-center items-center bg-[#f06321] opacity-90 rounded-full cursor-pointer hover:bg-orange-500 h-12 w-12 ">
-              <FaYoutube className='text-white'/>
-              </span>
-            </div>
-          </div>
-
-          <div className=" flex flex-col justify-center items-center gap-2 w-full">
-            <input
-              type="text"
-              placeholder="Enter your name"
-              className="px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
-            />
-
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
-            />
-            <textarea
-              className="px-4 py-4 w-full border-2 border-[#f06321] opacity-90 rounded-lg text-[18px] bg-slate-100 focus:outline-none focus:border-orange-400"
-              name=""
-              id=""
-              cols="30"
-              rows="5"
-              placeholder="Enter your message"
-            ></textarea>
-            <button className=" bg-[#f06321] opacity-90 text-white px-4 py-3 w-full rounded-lg hover:bg-orange-500 font-bold cursor-pointer">
-              SUBMIT
-            </button>
           </div>
         </div>
 
-        <img
-          src={cube}
-          alt="cube"
-          className="w-full h-72  absolute hidden lg:block"
-        />
-      </section>
-    </>
-  )
-}
+        {/* Right Section: Contact Form */}
+        <div className="bg-[#f06321] p-8 rounded-lg shadow-lg relative transform hover:scale-105 transition-transform duration-300">
+          <form ref={form} onSubmit={sendEmail} className="space-y-6">
+            <div>
+              <input
+                type="text"
+                name="from_name"
+                placeholder="Your Name"
+                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="email"
+                name="user_email"
+                placeholder="Your Email"
+                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                required
+              />
+            </div>
+            <div>
+              <input
+                type="tel"
+                name="user_phone"
+                placeholder="Your Phone"
+                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                required
+              />
+            </div>
+            <div>
+              <textarea
+                name="message"
+                placeholder="Your Message"
+                rows="4"
+                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                required
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              className="text-white w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+            >
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
 
-export default Contact
+      {/* Popup Alert */}
+      {showAlert && (
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
+          <div className="bg-white rounded-lg p-6 text-center shadow-lg">
+            <p className="text-lg font-semibold mb-4">{alertMessage}</p>
+            <button
+              onClick={handleCloseAlert}
+              className="bg-[#f06321] text-white px-4 py-2 rounded-lg hover:bg-orange-500"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ContactUs;
