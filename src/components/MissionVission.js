@@ -5,7 +5,7 @@ const missionVision = [
   {
     title: "Mission",
     description:
-      "Our Mission is to be a global leader in innovative technology solutions, empowering businesses with cutting-edge software, web applications, and mobile solutions. We strive to transform ideas into reality by delivering exceptional quality, seamless user experiences, and fostering long-term partnerships for digital success.",
+      "Our mission is to empower businesses by delivering innovative and reliable technology solutions. Through custom software, web, and mobile applications, we aim to simplify challenges, enhance user experiences, and drive meaningful growth for our clients.",
     icon: "https://cdn-icons-png.flaticon.com/128/14676/14676084.png",
   },
   {

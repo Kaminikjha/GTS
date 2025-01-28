@@ -122,7 +122,7 @@ const ContactUs = () => {
                 <MdOutlineEmail className="text-3xl" />
               </div>
               <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
-                g.rohithsai@gmail.com
+                rohithsai.g@gtands.com
               </p>
             </div>
           </div>
