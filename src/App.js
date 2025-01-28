@@ -8,12 +8,12 @@ import Navbar from "./components/Navbar";
 import Login from "./layouts/Login";
 import Register from "./layouts/Register";
 import MissionVission from "./components/MissionVission";
-import Partner from "./components/Partner";
+// import Partner from "./components/Partner";
 import Footer from "./components/Footer";
-import Form from "./components/Form";
-import Testimonials from "./components/Testimonials";
-import Career from "./components/Career";
-import Client from "./components/Client";
+// import Form from "./components/Form";
+// import Testimonials from "./components/Testimonials";
+// import Career from "./components/Career";
+// import Client from "./components/Client";
 
 
 
@@ -32,7 +32,7 @@ function App() {
               <Services />
               <MissionVission/>
               {/* <Client/> */}
-              <Partner/>
+              {/* <Partner/> */}
               {/* <Career /> */}
               <Contact />
               <Outlet />
@@ -49,7 +49,7 @@ function App() {
               <Services />
               <MissionVission/>
               {/* <Client/> */}
-              <Partner/>
+              {/* <Partner/> */}
               {/* <Career /> */}
               <Contact />
               <Outlet />
@@ -73,7 +73,7 @@ function App() {
           {/* <Route path="/career" element={<Career />}></Route> */}
           
           {/* <Route path="/client" element={<Client />}></Route> */}
-          <Route path="/partner" element={<Partner />}></Route>
+          {/* <Route path="/partner" element={<Partner />}></Route> */}
         </Route>
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
