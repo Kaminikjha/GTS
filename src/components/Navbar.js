@@ -11,7 +11,7 @@ const Navbar = () => {
       <nav className="bg-[#f06321] opacity-90 flex flex-wrap justify-between md:items-center text-white px-10 py-6 font-robotoSlab">
         {/* Logo Section */}
         <div className="flex items-center space-x-4">
-          <img className="rounded-2xl" src={logo} width={80} alt="Logo" />
+          <img className="rounded-2xl" src={logo} width={60} alt="Logo" />
           <span className=" hidden md:block md:text-2xl font-semibold">
             Gollamudi Technology and Software
           </span>
