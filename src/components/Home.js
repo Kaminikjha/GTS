@@ -51,17 +51,17 @@ const Home = () => {
       <div className="flex pt-10 flex-col md:gap-20 md:flex-row justify-between items-center px-10  font-[\'Roboto Slab\']">
         <div className="md:w-1/2">
           <div className=" md:text-left  ">
-            <h1 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 mb-4">
+            <h1 className="text-2xl md:text-5xl font-bold text-black mb-4">
               Welcome to Gollamudi Technology and Software
             </h1>
-            <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed mb-6">
+            <p className="text-sm md:text-2xl text-black leading-relaxed mb-6">
               At GTS, we transform ideas into reality. Our expertise lies in
               building world-class web and mobile applications tailored to meet
               your business goals. Whether it's designing user-friendly websites
               or developing powerful software solutions, we deliver innovation
               that drives success.
             </p>
-            <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed mb-6">
+            <p className="text-sm md:text-2xl text-black leading-relaxed mb-6">
              Are you ready to kickstart your career? Join our team and become part of a dynamic environment that values creativity, growth, and excellence. At GTS, fresh talent is nurtured, and every idea matters.
            </p>
           </div>

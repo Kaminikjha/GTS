@@ -88,40 +88,40 @@ const ContactUs = () => {
       id="contact"
       className="min-h-screen flex items-center justify-center p-6 mt-10"
     >
-      <div className="relative w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-2xl rounded-lg p-10 transform transition-transform duration-300 ease-in-out">
+      <div className="relative  w-full max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-2xl rounded-lg p-10 transform transition-transform duration-300 ease-in-out">
         {/* Left Section: Contact Information */}
         <div className="space-y-6">
-          <h2 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 hover:translate-x-2 transition-transform duration-300">
+          <h2 className="text-2xl md:text-5xl font-bold text-black hover:translate-x-2 transition-transform duration-300">
             Get In Touch With Us
           </h2>
-          <p className="text-sm md:text-xl text-[#f06321] opacity-90">
+          <p className="text-sm md:text-2xl text-black">
             Together, we can create something extraordinary. Let’s talk!
           </p>
           <div className="space-y-4">
             {/* Location Info */}
             <div className="flex items-center space-x-4">
               <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                <IoLocationSharp className="text-3xl" />
+                <IoLocationSharp className="text-4xl" />
               </div>
-              <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
+              <p className="text-black text-sm md:text-2xl">
                 Tenali, Andhra Pradesh
               </p>
             </div>
             {/* Phone Info */}
             <div className="flex items-center space-x-4">
               <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                <IoMdCall className="text-3xl" />
+                <IoMdCall className="text-4xl" />
               </div>
-              <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
+              <p className="text-black text-sm md:text-2xl">
                 +919490612648
               </p>
             </div>
             {/* Email Info */}
             <div className="flex items-center space-x-4">
               <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                <MdOutlineEmail className="text-3xl" />
+                <MdOutlineEmail className="text-4xl" />
               </div>
-              <p className="text-[#f06321] opacity-90 text-sm md:text-xl">
+              <p className="text-black text-sm md:text-2xl">
                 rohithsai.g@gtands.com
               </p>
             </div>
@@ -129,14 +129,14 @@ const ContactUs = () => {
         </div>
 
         {/* Right Section: Contact Form */}
-        <div className="bg-[#f06321] p-8 rounded-lg shadow-lg relative transform hover:scale-105 transition-transform duration-300">
+        <div className="bg-white  p-8 rounded-lg shadow-lg relative transform hover:scale-105 transition-transform duration-300">
           <form ref={form} onSubmit={sendEmail} className="space-y-6">
             <div>
               <input
                 type="text"
                 name="from_name"
                 placeholder="Your Name"
-                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
                 required
               />
             </div>
@@ -145,7 +145,7 @@ const ContactUs = () => {
                 type="email"
                 name="user_email"
                 placeholder="Your Email"
-                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
                 required
               />
             </div>
@@ -154,7 +154,7 @@ const ContactUs = () => {
                 type="tel"
                 name="user_phone"
                 placeholder="Your Phone"
-                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
                 required
               />
             </div>
@@ -163,13 +163,13 @@ const ContactUs = () => {
                 name="message"
                 placeholder="Your Message"
                 rows="4"
-                className="w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="text-white w-full px-4 py-3 rounded-md border-2 focus:outline-none focus:ring-2 transform hover:scale-105 duration-300"
+              className="text-sm md:text-2xl w-full px-4 py-2 bg-[#f06321] opacity-90 text-black rounded-md  transition-colors duration-300"
             >
               Send Message
             </button>
@@ -184,7 +184,7 @@ const ContactUs = () => {
             <p className="text-lg font-semibold mb-4">{alertMessage}</p>
             <button
               onClick={handleCloseAlert}
-              className="bg-[#f06321] text-white px-4 py-2 rounded-lg hover:bg-orange-500"
+              className="bg-[#f06321] opacity-90 text-white px-4 py-2 rounded-lg "
             >
               Close
             </button>

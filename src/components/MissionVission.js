@@ -21,10 +21,10 @@ const MissionVisionSection = () => {
     <section id="missionVision" className="bg-gray-50 py-16 px-4">
       <div className="max-w-7xl mx-auto text-center">
         <div className="mb-12">
-          <h2 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90">
+          <h2 className="text-2xl md:text-5xl font-bold text-black">
             Our Mission & Vision
           </h2>
-          <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed mt-4">
+          <p className="text-sm md:text-2xl text-black leading-relaxed mt-4">
             Driving innovation with purpose and creating a brighter tomorrow.
           </p>
         </div>
@@ -52,11 +52,11 @@ const MissionVisionSection = () => {
                   />
                 </div>
                 {/* Title */}
-                <h3 className="text-2xl font-bold text-[#f06321] opacity-90 group-hover:text-white transition-colors duration-300">
+                <h3 className="text-2xl font-bold text-black group-hover:text-white transition-colors duration-300">
                   {item.title}
                 </h3>
                 {/* Description */}
-                <p className="text-sm md:text-xl text-[#f06321] opacity-90 mt-2 group-hover:text-white transition-colors duration-300">
+                <p className="text-sm md:text-xl text-black mt-2 group-hover:text-white transition-colors duration-300">
                   {item.description}
                 </p>
               </div>

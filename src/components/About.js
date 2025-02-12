@@ -22,11 +22,11 @@ const VisionMission = () => {
         </div>
         {/* Text Content */}
         <div className="md:w-1/2">
-          <h2 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 mb-6">
+          <h2 className="text-2xl md:text-5xl font-bold text-black mb-6">
             About Us
           </h2>
 
-          <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed">
+          <p className="text-sm md:text-2xl text-black leading-relaxed">
             Gollamudi Technology and Software is dedicated to providing
             top-notch technology solutions for modern businesses. Our team of
             experts specializes in creating custom software, web applications,
