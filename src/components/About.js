@@ -1,6 +1,6 @@
 import React from "react";
-import { ReactTyped } from "react-typed";
-import img6 from "../assets/img-6.jpg";
+// import { ReactTyped } from "react-typed";
+import bgimg from "../assets/bg_img.jpeg";
 // hello
 const VisionMission = () => {
   return (
@@ -8,24 +8,15 @@ const VisionMission = () => {
       {/* Hero Section */}
       <section
         id="about"
-        className="flex md:gap-20 flex-col md:flex-row justify-between items-center px-10 my-20"
+        className="flex md:gap-10 flex-col md:flex-row justify-between items-center px-10 my-20"
       >
-          {/* Image Section */}
-          <div className="md:w-1/2 relative mt-10 md:mt-0 pb-10 md:pb-0">
-          <div className="">
-            <img
-              src={img6}
-              alt="Bakery Visual"
-              className="rounded-lg shadow-lg object-cover w-auto h-auto"
-            />
-          </div>
-        </div>
+          
         {/* Text Content */}
         <div className="md:w-1/2">
           <h2 className="text-2xl md:text-5xl font-bold text-black mb-6">
             About Us
           </h2>
-
+       
           <p className="text-sm md:text-2xl text-black leading-relaxed">
             Gollamudi Technology and Software is dedicated to providing
             top-notch technology solutions for modern businesses. Our team of
@@ -42,7 +33,16 @@ const VisionMission = () => {
             your trusted partner for growth and success in the digital world.
           </p>
         </div>
-
+{/* Image Section */}
+<div className="md:w-1/2 relative mt-10 md:mt-0 pb-10 md:pb-0">
+          <div className="">
+            <img
+              src={bgimg}
+              alt="Bakery Visual"
+              className="rounded-lg shadow-lg object-cover w-auto h-auto"
+            />
+          </div>
+        </div>
       
       </section>
     </>

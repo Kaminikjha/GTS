@@ -10,8 +10,8 @@ const Services = () => {
     >
       {/* Main Heading */}
       <div className="text-center pb-10">
-        <h2 className="text-2xl md:text-5xl font-bold text-black">Our Services</h2>
-        <p className="text-sm md:text-2xl pt-4 text-black">
+        <h2 className="text-2xl md:text-5xl font-bold text-white">Our Services</h2>
+        <p className="text-sm md:text-2xl pt-4 text-white">
           At Gollamudi Technology and Software, we provide innovative and reliable technology solutions to enhance your business's efficiency and growth.
         </p>
       </div>

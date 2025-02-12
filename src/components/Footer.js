@@ -78,11 +78,11 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-end items-center mt-8 border-t pt-4 ">
+      <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center mt-8 border-t pt-4 ">
         <p className="mb-4 md:mb-0 text-center text-lg md:text-xl  hover:opacity-90 hover:scale-105 transition duration-30">
           Copyright ©{" "}
           <a href="" className="md:mr-4 text-lg md:text-xl">
-            Gollamudi Technology and Software
+            2025 Gollamudi Technology and Software
           </a>
         </p>
         <div className="flex flex-col md:flex-row text-center"></div>

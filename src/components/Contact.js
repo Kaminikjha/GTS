@@ -88,6 +88,7 @@ const ContactUs = () => {
       id="contact"
       className="min-h-screen flex items-center justify-center p-6 mt-10"
     >
+      
       <div className="relative  w-full max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-2xl rounded-lg p-10 transform transition-transform duration-300 ease-in-out">
         {/* Left Section: Contact Information */}
         <div className="space-y-6">
@@ -169,7 +170,7 @@ const ContactUs = () => {
             </div>
             <button
               type="submit"
-              className="text-sm md:text-2xl w-full px-4 py-2 bg-[#f06321] opacity-90 text-black rounded-md  transition-colors duration-300"
+              className="text-sm md:text-2xl w-full px-4 py-2 bg-[#f06321] opacity-90 text-white rounded-md  transition-colors duration-300"
             >
               Send Message
             </button>
