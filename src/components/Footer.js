@@ -79,9 +79,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="container mx-auto px-4 flex flex-col md:flex-row justify-center items-center mt-8 border-t pt-4 ">
-        <p className="mb-4 md:mb-0 text-center text-lg md:text-xl  hover:opacity-90 hover:scale-105 transition duration-30">
+        <p className="mb-4 md:mb-0 text-center text-sm md:text-xl  hover:opacity-90 hover:scale-105 transition duration-30">
           Copyright ©{" "}
-          <a href="" className="md:mr-4 text-lg md:text-xl">
+          <a href="" className="md:mr-4 text-sm md:text-xl">
             2025 Gollamudi Technology and Software
           </a>
         </p>
