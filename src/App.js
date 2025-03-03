@@ -1,13 +1,15 @@
 import { Route, Routes, Outlet, } from "react-router-dom";
 import "./App.css";
+import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Services from "./components/Services";
 import Contact from "./components/Contact";
 import Home from "./components/Home";
-import Navbar from "./components/Navbar";
+
 import Login from "./layouts/Login";
 import Register from "./layouts/Register";
 import MissionVission from "./components/MissionVission";
+import Achievement from "./components/Achievement";
 // import Partner from "./components/Partner";
 import Footer from "./components/Footer";
 // import Form from "./components/Form";
@@ -16,10 +18,11 @@ import Footer from "./components/Footer";
 // import Client from "./components/Client";
 
 
-
 function App() {
   return (
     <>
+    
+    
    
       <Routes>
         <Route
@@ -30,12 +33,14 @@ function App() {
               <Home />
               <About/>
               <Services />
+              <Achievement/>
               <MissionVission/>
               {/* <Client/> */}
               {/* <Partner/> */}
               {/* <Career /> */}
               <Contact />
               <Outlet />
+              
             </>
           }
         ></Route>
@@ -47,6 +52,7 @@ function App() {
               <Home />
               <About/>
               <Services />
+              <Achievement/>
               <MissionVission/>
               {/* <Client/> */}
               {/* <Partner/> */}

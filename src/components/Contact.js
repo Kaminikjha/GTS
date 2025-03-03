@@ -3,6 +3,8 @@ import emailjs from "emailjs-com";
 import { IoMdCall } from "react-icons/io";
 import { IoLocationSharp } from "react-icons/io5";
 import { MdOutlineEmail } from "react-icons/md";
+import { DotLottieReact } from "@lottiefiles/dotlottie-react"; // Import DotLottieReact
+import video from "../assets/video.mp4"; // Ensure the path is correct
 
 const ContactUs = () => {
   const form = useRef();
@@ -86,58 +88,52 @@ const ContactUs = () => {
   return (
     <div
       id="contact"
-      className="min-h-screen flex items-center justify-center p-6 mt-10"
+      className="min-h-screen flex items-center justify-center   relative"
     >
-      
-      <div className="relative  w-full max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-10 bg-white shadow-2xl rounded-lg p-10 transform transition-transform duration-300 ease-in-out">
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        className="absolute z-0 w-full h-full object-cover"
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
+
+      <div className="relative w-full max-w-8xl grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10 p-4 md:p-6 lg:p-10 transform transition-transform duration-300 ease-in-out z-20  ">
         {/* Left Section: Contact Information */}
-        <div className="space-y-6">
-          <h2 className="text-2xl md:text-5xl font-bold text-black hover:translate-x-2 transition-transform duration-300">
+        <div className="space-y-4 md:space-y-6">
+          <h2 className="text-xl md:text-2xl lg:text-5xl font-bold text-white hover:translate-x-2 transition-transform duration-300">
             Get In Touch With Us
           </h2>
-          <p className="text-sm md:text-2xl text-black">
+          <p className="text-sm md:text-lg lg:text-2xl text-white">
             Together, we can create something extraordinary. Let’s talk!
           </p>
-          <div className="space-y-4">
-            {/* Location Info */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                <IoLocationSharp className="text-4xl" />
-              </div>
-              <p className="text-black text-sm md:text-2xl">
-                Tenali, Andhra Pradesh
-              </p>
-            </div>
-            {/* Phone Info */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                <IoMdCall className="text-4xl" />
-              </div>
-              <p className="text-black text-sm md:text-2xl">
-                +919490612648
-              </p>
-            </div>
-            {/* Email Info */}
-            <div className="flex items-center space-x-4">
-              <div className="bg-[#f06321] opacity-90 text-white p-4 rounded-lg shadow-2xl transform hover:scale-110 transition-transform duration-300">
-                <MdOutlineEmail className="text-4xl" />
-              </div>
-              <p className="text-black text-sm md:text-2xl">
-                rohithsai.g@gtands.com
-              </p>
-            </div>
+
+          {/* Lottie Animation Section (Replacing Image) */}
+          <div className="mt-4 md:mt-6">
+            <DotLottieReact
+              src="https://lottie.host/41b7c3e3-80f0-43f7-be66-c12408e4e87d/3P7voN3sI3.lottie"
+              loop
+              autoplay
+              className="w-full  rounded-lg"
+            />
           </div>
         </div>
 
         {/* Right Section: Contact Form */}
-        <div className="bg-white  p-8 rounded-lg shadow-lg relative transform hover:scale-105 transition-transform duration-300">
-          <form ref={form} onSubmit={sendEmail} className="space-y-6">
+        <div className="border border-1 border-white shadow-2xl p-4 md:p-6 lg:p-8 rounded-lg relative transform hover:scale-105 transition-transform duration-300">
+          <form ref={form} onSubmit={sendEmail} className="space-y-4 md:space-y-6">
             <div>
               <input
                 type="text"
                 name="from_name"
                 placeholder="Your Name"
-                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
+                className="text-white text-sm md:text-lg lg:text-2xl w-full px-3 md:px-4 py-2 bg-transparent border-b-2 border- focus:outline-none focus:border-white placeholder-white"
                 required
               />
             </div>
@@ -146,7 +142,7 @@ const ContactUs = () => {
                 type="email"
                 name="user_email"
                 placeholder="Your Email"
-                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
+                className="text-white text-sm md:text-lg lg:text-2xl w-full px-3 md:px-4 py-2 bg-transparent border-b-2 border- focus:outline-none focus:border-white placeholder-white"
                 required
               />
             </div>
@@ -155,7 +151,7 @@ const ContactUs = () => {
                 type="tel"
                 name="user_phone"
                 placeholder="Your Phone"
-                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
+                className="text-white text-sm md:text-lg lg:text-2xl w-full px-3 md:px-4 py-2 bg-transparent border-b-2 border- focus:outline-none focus:border-white placeholder-white"
                 required
               />
             </div>
@@ -164,13 +160,13 @@ const ContactUs = () => {
                 name="message"
                 placeholder="Your Message"
                 rows="4"
-                className="text-black text-sm md:text-2xl w-full px-4 py-2 bg-transparent border-b-2 border-black focus:outline-none focus:border-black placeholder-black "
+                className="text-white text-sm md:text-lg lg:text-2xl w-full px-3 md:px-4 py-2 bg-transparent border-b-2 border- focus:outline-none focus:border-white placeholder-white"
                 required
               ></textarea>
             </div>
             <button
               type="submit"
-              className="text-sm md:text-2xl w-full px-4 py-2 bg-[#f06321] opacity-90 text-white rounded-md  transition-colors duration-300"
+              className="text-sm md:text-lg lg:text-2xl w-full px-3 md:px-4 py-2 bg-[#f06321] opacity-90 text-white font-semibold rounded-md transition-colors duration-300"
             >
               Send Message
             </button>
@@ -181,11 +177,11 @@ const ContactUs = () => {
       {/* Popup Alert */}
       {showAlert && (
         <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white rounded-lg p-6 text-center shadow-lg">
-            <p className="text-lg font-semibold mb-4">{alertMessage}</p>
+          <div className="bg-white rounded-lg p-4 md:p-6 text-center shadow-lg">
+            <p className="text-sm md:text-lg font-semibold mb-2 md:mb-4">{alertMessage}</p>
             <button
               onClick={handleCloseAlert}
-              className="bg-[#f06321] opacity-90 text-white px-4 py-2 rounded-lg "
+              className="bg-[#f06321] opacity-90 text-white px-3 md:px-4 py-2 md:py-2 rounded-lg text-sm md:text-lg"
             >
               Close
             </button>
