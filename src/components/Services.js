@@ -1,52 +1,138 @@
-import React from "react";
-import { FcMultipleDevices  } from "react-icons/fc";
-import { FaLaptopCode } from "react-icons/fa";
+import React, { useState, useEffect } from 'react';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+import video from '../assets/video.mp4'; // Ensure the path is correct
 
-const Services = () => {
+const ServiceCard = ({ lottieSrc, title, description }) => {
+  const [isFlipped, setIsFlipped] = React.useState(false);
+
   return (
     <div
-      id="services"
-      className="my-20 text-white bg-[#f06321] opacity-90 shadow-xl mx-0 md:mx-10 rounded-lg p-12 font-[\'Roboto Slab\']"
+      className="group h-72 w-full max-w-sm mx-auto perspective cursor-pointer transition-all duration-300 hover:scale-105"
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
     >
-      {/* Main Heading */}
-      <div className="text-center pb-10">
-        <h2 className="text-2xl md:text-5xl font-bold">Our Services</h2>
-        <p className="text-sm md:text-2xl pt-4">
-          At Gollamudi Technology and Software, we provide innovative and reliable technology solutions to enhance your business's efficiency and growth.
-        </p>
-      </div>
-
-      {/* Services Section */}
-      <div className="md:flex justify-between items-center gap-8">
-        {/* Web Development Card */}
-        <div className="bg-white hover:scale-105 transition duration-300 rounded-lg shadow-md w-full md:w-1/2 p-6 my-5 sm:my-0">
-          <div className="flex flex-col items-center">
-            <div className="text-6xl mb-2 mt-4 animate-bounce">
-            <FcMultipleDevices />
-            </div>
-            <h3 className="text-2xl font-bold mb-2 text-[#f06321] opacity-90">
-              Web Development
-            </h3>
-            <p className="text-sm md:text-xl text-center text-[#f06321] opacity-90">
-              At Gollamudi Technology and Software, we craft stunning and user-friendly websites. Our team utilizes the latest technologies and creative designs to ensure your online presence stands out. Whether you need a simple site or a complex platform, we deliver high-quality solutions to drive your business's growth.
-            </p>
-          </div>
+      <div
+        className={`relative w-full h-full transition-transform duration-500 transform-style-3d ${
+          isFlipped ? 'rotate-y-180' : ''
+        }`}
+      >
+        {/* Front Face with Glass Effect */}
+        <div className="absolute w-full h-full backface-hidden rounded-xl shadow-lg overflow-hidden bg-white/10 backdrop-blur-md border border-white/20">
+          <DotLottieReact
+            src={lottieSrc}
+            loop
+            autoplay
+            className="w-full h-full object-contain p-6"
+          />
         </div>
 
-        {/* App Development Card */}
-        <div className="bg-white hover:scale-105 transition duration-300 rounded-lg shadow-md w-full md:w-1/2 p-6">
-          <div className="flex flex-col items-center">
-            <div className="text-6xl mb-2 mt-4 animate-bounce">📱</div>
-            <h3 className="text-2xl font-bold mb-2 text-[#f06321] opacity-90">
-              App Development
-            </h3>
-            <p className="text-sm md:text-xl text-center text-[#f06321] opacity-90">
-              At Gollamudi Technology and Software, we develop high-quality mobile applications tailored to your needs. Our team leverages innovative technology and user-focused design to create apps that engage users and support your business's growth. Whether for streamlining business processes or enhancing customer interactions, we deliver exceptional app solutions.
-            </p>
-          </div>
+        {/* Back Face with Orange Theme */}
+        <div className="absolute w-full h-full backface-hidden rotate-y-180 rounded-xl shadow-lg p-6 flex flex-col justify-center text-center bg-gradient-to-br from-orange-500 to-orange-600 backdrop-blur-md border border-orange-500/30">
+          <h3 className="text-2xl font-bold text-white mb-3">{title}</h3>
+          <p className="text-orange-100 text-base leading-relaxed">
+            {description}
+          </p>
         </div>
       </div>
     </div>
+  );
+};
+
+const Services = () => {
+  const services = [
+    {
+      title: 'App Development',
+      description:
+        'We create custom mobile applications tailored to your business needs using cutting-edge technology. Our focus is on delivering seamless performance and exceptional user experiences across all devices.',
+      lottieSrc:
+        'https://lottie.host/69dd8df4-bc8c-4ce2-9f3f-8345d3ba3482/csDNqlAUes.lottie',
+    },
+    {
+      title: 'Web Development',
+      description:
+        'Our team builds responsive, modern websites designed to enhance your online presence. We prioritize speed, security, and user-friendly interfaces to drive your business growth.',
+      lottieSrc:
+        'https://lottie.host/25a94245-fc3f-4a93-9376-f4cb3bb1318f/iOpltwc20O.lottie',
+    },
+  ];
+
+  const [showNavbar, setShowNavbar] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      if (currentScrollY > lastScrollY) {
+        // Scrolling down
+        setShowNavbar(false);
+      } else {
+        // Scrolling up
+        setShowNavbar(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [lastScrollY]);
+
+  return (
+    <section className="relative min-h-screen w-full overflow-hidden flex items-center justify-center">
+ 
+      
+
+      {/* Background Video */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute top-0 left-0 w-full h-full object-cover z-0 filter brightness-75"
+      >
+        <source src={video} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
+      {/* Overlay with better contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-black/60 to-black/40 z-10" />
+
+      {/* Content */}
+      <div className="relative z-20 container mx-auto px-4 py-20 flex flex-col items-center justify-center">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight text-white text-center mb-12 md:mb-16 drop-shadow-lg">
+          Our Services
+        </h2>
+
+        {/* Services Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6 md:gap-8 w-full max-w-4xl mx-auto">
+          {services.map((service, index) => (
+            <ServiceCard
+              key={index}
+              lottieSrc={service.lottieSrc}
+              title={service.title}
+              description={service.description}
+            />
+          ))}
+        </div>
+      </div>
+
+      {/* Custom Styles */}
+      <style jsx>{`
+        .perspective {
+          perspective: 1200px;
+        }
+        .transform-style-3d {
+          transform-style: preserve-3d;
+        }
+        .backface-hidden {
+          backface-visibility: hidden;
+        }
+        .rotate-y-180 {
+          transform: rotateY(180deg);
+        }
+      `}</style>
+    </section>
   );
 };
 

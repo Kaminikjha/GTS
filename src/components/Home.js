@@ -1,78 +1,47 @@
-// import React, { useState } from "react";
-// import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import bg from "../assets/bgvideo1.mp4";
 
-// const Home = () => {
-//   const [open, setOpen] = useState(false);
-
-//   // Handle toggle
-//   const toggle = () => {
-//     setOpen(!open);
-//   };
-
-//   const navigate = useNavigate();
-
-//   return (
-//     <>
-//       <div
-//         id="Home"
-//         className="w-full h-screen relative text-white flex items-center justify-center flex-col md:flex-row p-8 md:p-16 font-[\'Roboto Slab\']"
-//         style={{
-//           backgroundImage:
-//             "url('https://images.unsplash.com/photo-1484417894907-623942c8ee29?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')",
-//           backgroundSize: "cover",
-//           backgroundPosition: "center",
-//         }}
-//       >
-//         {/* Text Content */}
-//         <div className="text-center md:text-left md:w-3/4 md:pr-10 z-10">
-//           <h1 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 mb-4">
-//             Welcome to Gollamudi Technology and Software
-//           </h1>
-//           <p className="text-sm md:text-2xl text-white leading-relaxed mb-6">
-//             At GTS, we transform ideas into reality. Our expertise lies in building world-class web and mobile applications tailored to meet your business goals. Whether it's designing user-friendly websites or developing powerful software solutions, we deliver innovation that drives success.
-//           </p>
-//           <p className="text-sm md:text-2xl text-white leading-relaxed mb-6">
-//             Are you ready to kickstart your career? Join our team and become part of a dynamic environment that values creativity, growth, and excellence. At GTS, fresh talent is nurtured, and every idea matters.
-//           </p>
-//         </div>
-//       </div>
-//     </>
-//   );
-// };
-
-// export default Home;
-
-import React from "react";
-import img from "../assets/img.png";
-
-const Home = () => {
+const Homepage = () => {
   return (
-    <>
-      <div className="flex pt-10 flex-col md:gap-20 md:flex-row justify-between items-center px-10  font-[\'Roboto Slab\']">
-        <div className="md:w-1/2">
-          <div className=" md:text-left  ">
-            <h1 className="text-2xl md:text-5xl font-bold text-[#f06321] opacity-90 mb-4">
-              Welcome to Gollamudi Technology and Software
-            </h1>
-            <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed mb-6">
-              At GTS, we transform ideas into reality. Our expertise lies in
-              building world-class web and mobile applications tailored to meet
-              your business goals. Whether it's designing user-friendly websites
-              or developing powerful software solutions, we deliver innovation
-              that drives success.
-            </p>
-            <p className="text-sm md:text-2xl text-[#f06321] opacity-90 leading-relaxed mb-6">
-             Are you ready to kickstart your career? Join our team and become part of a dynamic environment that values creativity, growth, and excellence. At GTS, fresh talent is nurtured, and every idea matters.
-           </p>
-          </div>
+    <div className="h-auto bg-white">
+      {/* Hero Section with Video Background */}
+      <section className="relative min-h-screen flex items-center justify-center md:justify-end px-4 py-12 sm:py-16 lg:px-10 lg:py-20">
+        {/* Video Background */}
+        <div className="absolute inset-0 w-full h-full overflow-hidden z-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
+            className="w-full h-full object-cover"
+          >
+            <source src={bg} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
         </div>
 
-        <div>
-          <img src={img} width={600} className=" object-cover" alt=" Avtar Image" />
+        {/* Dark Overlay */}
+        <div className="absolute inset-0 w-full h-full bg-black opacity-60 z-[1]" />
+
+        {/* Content */}
+        <div className="relative z-10 w-full max-w-md sm:max-w-lg md:max-w-xl xl:max-w-2xl text-center md:text-right">
+          <h1 className="text-2xl sm:text-3xl md:text-3xl font-bold text-white mb-6 leading-tight">
+            Innovative Digital Solutions for Your Business
+          </h1>
+          <p className="text-sm sm:text-base md:text-xl text-white leading-relaxed mb-8">
+            At Gollamudi Technology and Software, we create cutting-edge web and mobile applications that drive growth and innovation. Our expert team transforms ideas into powerful, user-friendly solutions using the latest technology. Whether you're a startup or an enterprise, we deliver high-performance, scalable, and visually stunning applications tailored to your needs.
+          </p>
+          {/* <Link
+            to="/all-sections#services" // Navigate to AllSections page with #services hash
+            className="inline-block bg-[#f06321] text-base sm:text-lg md:text-xl text-white font-semibold px-6 py-2 sm:px-6 sm:py-3 md:px-8 md:py-4 rounded-lg hover:bg-orange-600 transition duration-300"
+          >
+            Explore Our Services
+          </Link> */}
         </div>
-      </div>
-    </>
+      </section>
+    </div>
   );
 };
 
-export default Home;
+export default Homepage;
